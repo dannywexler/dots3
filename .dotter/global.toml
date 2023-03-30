@@ -1,0 +1,13 @@
+
+[fonts.variables]
+monoFont = "Liga SFMono Nerd Font"
+monoFontSize = 18
+
+[linux]
+depends = ["fonts"]
+
+[linux.files]
+wezterm = "~/.config/wezterm"
+
+[windows]
+depends = ["fonts"]

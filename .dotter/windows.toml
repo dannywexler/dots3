@@ -1,0 +1,5 @@
+[fonts.variables]
+monoFontSize = 16
+
+[windows.files]
+wezterm = "~/AppData/Local/wezterm"
