@@ -1,6 +1,6 @@
 local t = require 'wezterm';
 local act = t.action
-local function builtin (name)
+local function builtin(name)
     return t.color.get_builtin_schemes()[name]
 end
 
@@ -34,6 +34,7 @@ tokyo2.foreground = '#ffffff'
 tokyo2.background = '#12131b'
 tokyo2.ansi = eight
 tokyo2.brights = eight
+tokyo2.split = '#593af2'
 return {
     -- cell_width = 0.8,
     -- cell_width = 0.9,
@@ -52,24 +53,45 @@ return {
     color_schemes = {
         ['tokyo2'] = tokyo2
     },
-    -- default_prog = { 'powershell.exe' },
-    default_prog = {'zsh'},
+    {{#if (eq dotter.os "unix")}}
+    default_prog = { 'zsh' },
+    {{else}}
+    default_prog = { 'powershell.exe' },
+    {{/if}}
     disable_default_key_bindings = true,
     font = t.font '{{ monoFont }}',
     font_size = {{ monoFontSize }},
     hide_tab_bar_if_only_one_tab = true,
+    inactive_pane_hsb = {
+        saturation = 0.8,
+        brightness = 0.8,
+    },
     keys = {
+
         { key = "c", mods = "CTRL|ALT", action = act.CopyTo("Clipboard") },
         { key = "d", mods = "CTRL|ALT", action = act.ActivateCopyMode },
         { key = "f", mods = "CTRL|ALT", action = act.Search { CaseInSensitiveString = "" } },
-        { key = "n", mods = "CTRL|ALT", action = "SpawnWindow" },
+        { key = "h", mods = "CTRL|ALT", action = act.ActivatePaneDirection 'Left' },
+        { key = "i", mods = "CTRL|ALT", action = act.AdjustPaneSize { 'Right', 1 } },
+        { key = "j", mods = "CTRL|ALT", action = act.ActivatePaneDirection 'Down' },
+        { key = "k", mods = "CTRL|ALT", action = act.ActivatePaneDirection 'Up' },
+        { key = "l", mods = "CTRL|ALT", action = act.ActivatePaneDirection 'Right' },
+        { key = "m", mods = "CTRL|ALT", action = act.SplitVertical { domain = 'CurrentPaneDomain' } },
+        { key = "n", mods = "CTRL|ALT", action = act.SplitHorizontal { domain = 'CurrentPaneDomain' } },
+        { key = "o", mods = "CTRL|ALT", action = act.AdjustPaneSize { 'Up', 1 } },
+        { key = "p", mods = "CTRL|ALT", action = act.AdjustPaneSize { 'Down', 1 } },
         { key = "r", mods = "CTRL|ALT", action = "ReloadConfiguration" },
-        { key = "t", mods = "CTRL", action = act.ActivateTabRelative(1) },
+        { key = "t", mods = "CTRL",     action = act.ActivateTabRelative(1) },
         { key = "t", mods = "CTRL|ALT", action = act.SpawnTab("CurrentPaneDomain") },
+        { key = "u", mods = "CTRL|ALT", action = act.AdjustPaneSize { 'Left', 1 } },
         { key = "v", mods = "CTRL|ALT", action = act.PasteFrom("Clipboard") },
         { key = "w", mods = "CTRL|ALT", action = act.CloseCurrentTab { confirm = true } },
-        { key = "9", mods = "CTRL", action = "DecreaseFontSize" },
-        { key = "0", mods = "CTRL", action = "IncreaseFontSize" },
+        { key = "y", mods = "CTRL|ALT", action = act.CloseCurrentPane { confirm = false } },
+
+        { key = ";", mods = "CTRL|ALT", action = "SpawnWindow" },
+
+        { key = "0", mods = "CTRL",     action = "IncreaseFontSize" },
+        { key = "9", mods = "CTRL",     action = "DecreaseFontSize" },
     },
     tab_max_width = 68,
     use_fancy_tab_bar = false,
@@ -80,5 +102,5 @@ return {
         left = 0,
     }
 }
--- && || -> --> --> => ==> == != <> < > </> /> 
+-- && || -> --> --> => ==> == != <> < > </> />
 -- wezterm ls-fonts --list-system
