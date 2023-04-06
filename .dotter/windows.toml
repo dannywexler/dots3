@@ -1,5 +1,5 @@
 [fonts.variables]
 monoFontSize = 15
 
-[windows.files]
+[core.files]
 wezterm = "C:/bit9prog/dev/WezTerm"

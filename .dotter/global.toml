@@ -3,11 +3,9 @@
 monoFont = "Liga SFMono Nerd Font"
 monoFontSize = 18
 
-[linux]
+[core]
 depends = ["fonts"]
 
-[linux.files]
+[core.files]
+starship = "~/.config"
 wezterm = "~/.config/wezterm"
-
-[windows]
-depends = ["fonts"]

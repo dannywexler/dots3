@@ -1,3 +1,2 @@
 # includes = [".dotter/windows.toml"]
-# packages = ["windows"]
-packages = ["linux"]
+packages = ["core"]
