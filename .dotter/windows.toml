@@ -2,4 +2,6 @@
 monoFontSize = 15
 
 [core.files]
+"lf/lf.sh" = "~/AppData/Local/lf/lfrc"
+lf = "~/AppData/Local/lf"
 wezterm = "C:/bit9prog/dev/WezTerm"
