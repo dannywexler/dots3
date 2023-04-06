@@ -85,8 +85,8 @@ return {
         { key = "t", mods = "CTRL|ALT", action = act.SpawnTab("CurrentPaneDomain") },
         { key = "u", mods = "CTRL|ALT", action = act.AdjustPaneSize { 'Left', 1 } },
         { key = "v", mods = "CTRL|ALT", action = act.PasteFrom("Clipboard") },
-        { key = "w", mods = "CTRL|ALT", action = act.CloseCurrentTab { confirm = true } },
-        { key = "y", mods = "CTRL|ALT", action = act.CloseCurrentPane { confirm = false } },
+        -- { key = "w", mods = "CTRL|ALT", action = act.CloseCurrentTab { confirm = true } },
+        { key = "w", mods = "CTRL|ALT", action = act.CloseCurrentPane { confirm = false } },
 
         { key = ";", mods = "CTRL|ALT", action = "SpawnWindow" },
 

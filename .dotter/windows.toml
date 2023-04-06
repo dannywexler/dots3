@@ -1,5 +1,5 @@
 [fonts.variables]
-monoFontSize = 16
+monoFontSize = 15
 
 [windows.files]
-wezterm = "~/AppData/Local/wezterm"
+wezterm = "C:/bit9prog/dev/WezTerm"
