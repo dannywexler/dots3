@@ -9,5 +9,6 @@ depends = ["fonts"]
 [core.files]
 "lf/lf.sh" = "~/.config/lf/lfrc"
 lf = "~/.config/lf"
+lsd = "~/.config/lsd"
 starship = "~/.config"
 wezterm = "~/.config/wezterm"
