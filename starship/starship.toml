@@ -1,6 +1,10 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
-format = '$directory'
+format = '$directory$git_branch$git_status'
+palette = 'mycolors'
+
+[palettes.mycolors]
+orange = '#f14c28'
 
 [directory.substitutions]
 '/' = '  '
@@ -10,3 +14,9 @@ truncate_to_repo = false
 format = '[$path]($style)[](#1abc9c) '
 use_os_path_sep = false
 style = 'bold fg:#000000 bg:#1abc9c'
+
+[git_branch]
+format = ' [$symbol$branch(:$remote_branch)]($style) '
+
+[git_status]
+style = 'bold orange'
