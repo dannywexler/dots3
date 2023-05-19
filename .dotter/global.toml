@@ -7,6 +7,7 @@ monoFontSize = 18
 depends = ["fonts"]
 
 [core.files]
+fonts = "~/.local/share/fonts"
 "lf/lf.sh" = "~/.config/lf/lfrc"
 lf = "~/.config/lf"
 lsd = "~/.config/lsd"
