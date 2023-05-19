@@ -12,3 +12,9 @@ lf = "~/.config/lf"
 lsd = "~/.config/lsd"
 starship = "~/.config"
 wezterm = "~/.config/wezterm"
+
+[linux]
+depends = ["fonts"]
+
+[linux.files]
+yay = "~/.config/yay"
