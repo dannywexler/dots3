@@ -19,3 +19,4 @@ depends = ["fonts"]
 
 [linux.files]
 yay = "~/.config/yay"
+"zsh/zshenv.sh" = "~/.zshenv"

@@ -6,14 +6,15 @@ function addToFile() {
 }
 
 function archPackages() {
-    cd ~/dots3/yay
+    cd ${MYDOTS}/yay
     yay -Syu --noconfirm - < 'archPackages.txt'
 }
 
 function cloneDots() {
     echo 'cloning dots'
-    git clone https://github.com/dannywexler/dots3.git ~/dots3
-    cd ~/dots3
+    git config --global http.postBuffer 524288000
+    git clone https://github.com/dannywexler/dots3.git $MYDOTS
+    cd $MYDOTS
     ./dotter -vf
     echo 'updating font cache'
     fc-cache -f -v > /dev/null
@@ -45,7 +46,7 @@ function homeFolderCleanup() {
 
 
 function loadGnome() {
-    dconf load /org/gnome/ < ~/dots3/gnome/gnome.conf
+    dconf load /org/gnome/ < ${MYDOTS}/gnome/gnome.conf
 }
 
 cloneDots
