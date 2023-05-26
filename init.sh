@@ -1,4 +1,5 @@
 set -e
+MYDOTS=~/dots3
 function addToFile() {
     LINE=$1
     FILE=$2
@@ -7,7 +8,7 @@ function addToFile() {
 
 function archPackages() {
     cd ${MYDOTS}/yay
-    yay -Syu --noconfirm - < 'archPackages.txt'
+    ./yay -Syu --noconfirm - < 'archPackages.txt'
 }
 
 function cloneDots() {
@@ -44,12 +45,11 @@ function homeFolderCleanup() {
     rm -rf $HOME/Videos/
 }
 
-
 function loadGnome() {
-    dconf load /org/gnome/ < ${MYDOTS}/gnome/gnome.conf
+    dconf load / < ${MYDOTS}/gnome/gnome.conf
 }
 
 cloneDots
 connectToNas
-homefoldercleanup
+homeFolderCleanup
 loadGnome

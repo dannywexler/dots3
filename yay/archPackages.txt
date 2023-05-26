@@ -43,6 +43,7 @@ nfs-utils
 nmap
 nodejs
 npm
+onlyoffice-bin
 openssl
 pantheon-files
 pavucontrol
