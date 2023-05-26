@@ -1,0 +1,7 @@
+[user]
+	name = Danny Wexler
+	email = dannywexler@gmail.com
+[credential]
+	helper = store
+[http]
+	postBuffer = 524288000

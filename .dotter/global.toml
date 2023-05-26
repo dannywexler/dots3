@@ -18,5 +18,6 @@ depends = ["fonts"]
 
 [linux.files]
 fonts = "~/.local/share/fonts"
+git = "~/"
 yay = "~/.config/yay"
 "zsh/.zshenv" = "~/.zshenv"

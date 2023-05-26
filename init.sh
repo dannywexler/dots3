@@ -13,7 +13,6 @@ function archPackages() {
 
 function cloneDots() {
     echo 'cloning dots'
-    git config --global http.postBuffer 524288000
     git clone https://github.com/dannywexler/dots3.git $MYDOTS
     cd $MYDOTS
     ./dotter -vf
