@@ -1,22 +1,46 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
-format = '$directory$git_branch$git_status'
+format = '$directory$git_branch$git_status$custom  '
+
+command_timeout = 5000
+
 palette = 'mycolors'
 
 [palettes.mycolors]
 orange = '#f14c28'
+green = '#1abc9c'
+blue = '#0091f8'
+black = '#000000'
+purple = '#bb9af7'
 
 [directory.substitutions]
 '/' = '  '
 
 [directory]
 truncate_to_repo = false
-format = '[$path]($style)[](#1abc9c) '
+format = '[](green)[$path]($style)[](green)'
 use_os_path_sep = false
-style = 'bold fg:#000000 bg:#1abc9c'
+style = 'bold fg:black bg:green'
 
 [git_branch]
-format = ' [$symbol$branch(:$remote_branch)]($style) '
+format = ' [](blue)[$symbol$branch(:$remote_branch)]($style)'
+style = 'bold fg:black bg:blue'
 
 [git_status]
-style = 'bold orange'
+format = '([ \[$all_status$ahead_behind\]]($style))[](blue)'
+style = 'bold fg:black bg:blue'
+
+[custom.mysvn]
+command = 'svs'
+# command = 'svs -h'
+# command = 'svs -u'
+# when = 'svs -s'
+detect_folders = ['.svn']
+description = 'SVN status module'
+format = " [](purple)[$output]($style)[](purple)"
+shell = ['powershell.exe', '-NoProfile', '-Command', '-']
+# shell = ['powershell.exe', '-Command', '-']
+os = 'windows'
+use_stdin = true
+ignore_timeout = true
+style = 'bold fg:black bg:purple'
