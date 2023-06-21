@@ -1,7 +1,10 @@
 source $ZDOTDIR/aliases.sh
 source $ZDOTDIR/archHelpers.sh
 # path+=('/home/danny/dots/scripts/')
-path+=('/home/danny/.cargo/bin')
+path+=(
+'/home/danny/.cargo/bin'
+$MYDOTS/yay/
+)
 
 # The following lines were added by compinstall
 zstyle ':completion:*' auto-description 'specify: %d'

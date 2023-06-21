@@ -14,6 +14,7 @@ alias v='nvim'
 alias vc='cd ~/.config/nvim/ && nvim'
 alias zc='cd ~/dots/zsh/ && nvim'
 alias rustinstall='curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh'
+alias we='watchexec -c'
 
 function pacs(){
     for p in $(yay -Slq)
