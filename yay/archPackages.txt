@@ -39,6 +39,7 @@ libvirt
 linux-headers
 lsd
 ly
+man
 mediainfo
 megasync-bin
 neovim
@@ -79,6 +80,7 @@ webkit2gtk
 wezterm
 wget
 wl-clipboard
+wpaperd
 xclip
 yofi
 yt-dlp
