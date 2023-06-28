@@ -1,10 +1,20 @@
+[colors.variables]
+blueMedium = "#0091f8"
+greenBright = "#00ffcc"
+grayDark = "#1f2335"
+gray = "#b8bdd1"
+white = "#ffffff"
+black = "#000000"
+magentaBright = "#ff007c"
 
 [fonts.variables]
+displayFont = "SF Pro Rounded"
+displayFontSize = 16
 monoFont = "Liga SFMono Nerd Font"
 monoFontSize = 18
 
 [core]
-depends = ["fonts"]
+depends = ["colors", "fonts"]
 
 [core.files]
 "lf/lf.sh" = "~/.config/lf/lfrc"
