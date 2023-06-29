@@ -1,3 +1,4 @@
+alsa-utils
 appmenu-gtk-module
 aria2
 base-devel
