@@ -4,7 +4,10 @@ source $ZDOTDIR/archHelpers.sh
 path+=(
 '/home/danny/.cargo/bin'
 $MYDOTS/yay/
+$MYDOTS/scripts/
 )
+
+setopt histignorealldups
 
 # The following lines were added by compinstall
 zstyle ':completion:*' auto-description 'specify: %d'

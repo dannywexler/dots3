@@ -52,3 +52,4 @@ cloneDots
 connectToNas
 homeFolderCleanup
 loadGnome
+rustup default stable
