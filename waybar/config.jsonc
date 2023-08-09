@@ -1,0 +1,94 @@
+{
+    "spacing": 14,
+    "output": "HDMI-A-1",
+    "modules-left": [
+        "cpu",
+        "memory",
+        "memory#swap",
+    ],
+    "modules-center": [
+        "custom/workspaces"
+    ],
+    "modules-right": [
+        "tray",
+        // "network#dl",
+        // "network#ul",
+        "custom/download",
+        "custom/upload",
+        "custom/volume",
+        "clock"
+    ],
+    //***************************
+    //*  Modules configuration  *
+    //***************************
+    "clock": {
+        "format": "{:%I:%M %p on %a %b %d}",
+        "tooltip-format": "<tt><big>{calendar}</big></tt>"
+    },
+    "cpu": {
+        "format": "CPU  {icon0} {icon1} {icon2} {icon3} {icon4} {icon5} {icon6} {icon7} {icon8} {icon9} {icon10} {icon11}  ",
+        "format-icons": [
+            "▁",
+            "▂",
+            "▃",
+            "▄",
+            "▅",
+            "▆",
+            "▇",
+            "█"
+        ],
+        "interval": 10
+    },
+    "custom/download": {
+        "exec": "$HOME/dots3/scripts/networkTraffic.sh down",
+        "format": "DL {}  ",
+        "interval": 1,
+        "tooltip": false
+    },
+    "custom/upload": {
+        "exec": "$HOME/dots3/scripts/networkTraffic.sh up",
+        "format": "UL {}  ",
+        "interval": 1,
+        "tooltip": false
+    },
+    "custom/volume": {
+        "exec": "$HOME/dots3/scripts/vol.sh status",
+        "format": "VOL {}%   ",
+        // "interval": 2,
+        "interval": "once",
+        "signal": 8,
+        "tooltip": false
+    },
+    "custom/workspaces": {
+        "exec": "$HOME/dots3/scripts/workspaces.ts status",
+        "format": "{}",
+        // "interval": 2,
+        "interval": "once",
+        "signal": 8,
+        "tooltip": false
+    },
+    "memory": {
+        "interval": 30,
+        "format": "MEM {used:0.1f}G/{total:0.1f}G  "
+        // "format": "  {used:0.1f}G/{total:0.1f}G"
+    },
+    "memory#swap": {
+        "interval": 30,
+        "format": "SWAP {swapUsed:0.1f}G/{swapTotal:0.1f}G  "
+        // "format": "  {swapUsed:0.1f}G/{swapTotal:0.1f}G"
+    },
+    // "network#dl": {
+    //     // "interface": "enp5s0",
+    //     "interval": "5",
+    //     "format": "DL {ifname} {bandwidthDownBits}  "
+    // },
+    // "network#ul": {
+    //     "interface": "enp5s0",
+    //     "interval": "5",
+    //     "format": "UL {ifname} {bandwidthUpBits}  "
+    // },
+    "tray": {
+        "icon-size": 16,
+        "spacing": 0
+    }
+}
