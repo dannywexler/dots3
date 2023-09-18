@@ -10,8 +10,9 @@ magentaBright = "#ff007c"
 [fonts.variables]
 displayFont = "SF Pro Rounded"
 displayFontSize = 16
-monoFont = "Liga SFMono Nerd Font"
-monoFontSize = 18
+# monoFont = "Liga SFMono Nerd Font"
+monoFont = "CommitMono"
+monoFontSize = 17
 
 [core]
 depends = ["colors", "fonts"]
@@ -31,6 +32,7 @@ kitty = "~/.config/kitty"
 lsd = "~/.config/lsd"
 git = "~/"
 sway = "~/.config/sway"
+waybar = "~/.config/waybar"
 wpaperd = "~/.config/wpaperd"
 yay = "~/.config/yay"
 "zsh/.zshenv" = "~/.zshenv"
