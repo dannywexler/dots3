@@ -53,4 +53,8 @@ bindkey '^[[F' end-of-line
 # zle -al to list all possible zle commands
 # bindkey by itself to list current keybinds
 # ctrl+v then the key to find out the keycode
+
+source ${ZDOTDIR:-~}/.antidote/antidote.zsh
+antidote load
+
 eval "$(starship init zsh)"
