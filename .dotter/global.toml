@@ -12,7 +12,8 @@ displayFont = "SF Pro Rounded"
 displayFontSize = 16
 # monoFont = "Liga SFMono Nerd Font"
 # monoFont = "CommitMono"
-monoFont = "Myosevka"
+# monoFont = "Myosevka"
+monoFont = "IosevkaTerm Nerd Font"
 monoFontSize = 17
 
 [core]

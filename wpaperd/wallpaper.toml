@@ -1,4 +1,4 @@
 [default]
-path = "~/mega/Backgrounds/"
+path = "~/mega/backgrounds/"
 duration = "30m"
-apply-shadow = true
+apply-shadow = false

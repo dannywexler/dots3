@@ -12,7 +12,10 @@ alias dots2='cd ~/dots2 && nvim'
 alias ls='lsd -lA'
 alias v='nvim'
 alias vc='cd ~/.config/nvim/ && nvim'
+alias vtest='we -r NVIM_APPNAME=nvimSleek nvim --headless'
+alias vs='NVIM_APPNAME=nvimSleek nvim'
 alias zc='cd ~/dots/zsh/ && nvim'
+alias zs='source $ZDOTDIR'
 alias rustinstall='curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh'
 alias we='watchexec --clear=clear'
 
@@ -36,4 +39,12 @@ e () {
             fi
         fi
     fi
+}
+
+vr () {
+    while : ; do
+        cd ~/.config/nvimLazy
+        NVIM_APPNAME=nvimLazy nvim
+        [[ $? -eq 2 ]] && echo "restarting nvimLazy" || break
+    done
 }

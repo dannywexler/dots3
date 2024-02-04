@@ -59,8 +59,10 @@ return {
     default_prog = { 'powershell.exe' },
     {{/if}}
     disable_default_key_bindings = true,
+    enable_wayland = false,
     font = t.font '{{ monoFont }}',
     font_size = {{ monoFontSize }},
+    front_end = 'WebGpu',
     hide_tab_bar_if_only_one_tab = true,
     inactive_pane_hsb = {
         saturation = 0.8,

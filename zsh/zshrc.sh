@@ -3,11 +3,14 @@ source $ZDOTDIR/archHelpers.sh
 # path+=('/home/danny/dots/scripts/')
 path+=(
 '/home/danny/.cargo/bin'
+'/home/danny/.local/bin'
 $MYDOTS/yay/
 $MYDOTS/scripts/
+$PNPM_HOME
 )
 
 setopt histignorealldups
+precmd () {print -Pn "\e]0;%~\a"}
 
 # The following lines were added by compinstall
 zstyle ':completion:*' auto-description 'specify: %d'
