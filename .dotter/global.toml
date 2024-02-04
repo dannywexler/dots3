@@ -29,12 +29,16 @@ wezterm = "~/.config/wezterm"
 depends = ["fonts"]
 
 [linux.files]
-fonts = "~/.local/share/fonts"
+fonts = { target = "~/.local/share/fonts", type = "symbolic" }
 kitty = "~/.config/kitty"
 lsd = "~/.config/lsd"
 git = "~/"
 sway = "~/.config/sway"
 waybar = "~/.config/waybar"
 wpaperd = "~/.config/wpaperd"
-yay = "~/.config/yay"
+yay = { target = "~/.config/yay", type = "symbolic" }
+yofi = { target = "~/.config/yofi", type = "template" }
 "zsh/.zshenv" = "~/.zshenv"
+
+[helpers]
+hex2rgb = ".dotter/helpers/hex2rgb.rhai"
