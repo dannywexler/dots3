@@ -10,11 +10,12 @@ magentaBright = "#ff007c"
 [fonts.variables]
 displayFont = "SF Pro Rounded"
 displayFontSize = 16
+monoFont = "CommitMono Nerd Font"
 # monoFont = "Liga SFMono Nerd Font"
 # monoFont = "CommitMono"
 # monoFont = "Myosevka"
-monoFont = "IosevkaTerm Nerd Font"
-monoFontSize = 17
+# monoFont = "IosevkaTerm Nerd Font"
+monoFontSize = 16
 
 [core]
 depends = ["colors", "fonts"]
